@@ -1,0 +1,20 @@
+{
+  "registry": "meridian-enterprise-skills",
+  "enterprise": "Meridian Bank",
+  "project": "Payments Copilot",
+  "memoryStore": "Backboard",
+  "scope": "enterprise",
+  "generatedBy": "Skill Foundry — capsule RL loop",
+  "skills": {
+    "skill/payment-idempotency": {
+      "name": "Payment Idempotency",
+      "currentVersion": "2.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 900,
+      "derivedFromCapsule": "CAP-1006",
+      "useCases": [ "Safe retry of real-time payments", "Refund-endpoint idempotency", "Double-submit protection at the API boundary" ]
+    }
+  }
+}
