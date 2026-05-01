@@ -15,6 +15,16 @@
       "tokensSavedPerUse": 900,
       "derivedFromCapsule": "CAP-1006",
       "useCases": [ "Safe retry of real-time payments", "Refund-endpoint idempotency", "Double-submit protection at the API boundary" ]
+    },
+    "skill/iso20022-mapper": {
+      "name": "ISO 20022 Mapper",
+      "currentVersion": "1.2.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 2100,
+      "derivedFromCapsule": "CAP-1007",
+      "useCases": [ "pacs.008 outbound mapping", "camt inbound parsing", "Currency-correct decimal scaling" ]
     }
   }
 }
