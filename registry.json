@@ -18,12 +18,12 @@
     },
     "skill/iso20022-mapper": {
       "name": "ISO 20022 Mapper",
-      "currentVersion": "1.2.0",
+      "currentVersion": "1.3.0",
       "scope": "enterprise",
       "adoptionPolicy": "auto",
       "optedIn": true,
-      "tokensSavedPerUse": 2100,
-      "derivedFromCapsule": "CAP-1007",
+      "tokensSavedPerUse": 2400,
+      "derivedFromCapsule": "CAP-1002",
       "useCases": [ "pacs.008 outbound mapping", "camt inbound parsing", "Currency-correct decimal scaling" ]
     }
   }
