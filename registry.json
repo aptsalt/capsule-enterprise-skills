@@ -25,6 +25,16 @@
       "tokensSavedPerUse": 2400,
       "derivedFromCapsule": "CAP-1002",
       "useCases": [ "pacs.008 outbound mapping", "camt inbound parsing", "Currency-correct decimal scaling" ]
+    },
+    "skill/pci-redaction": {
+      "name": "PCI Redaction",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "manual",
+      "optedIn": true,
+      "tokensSavedPerUse": 600,
+      "derivedFromCapsule": "CAP-1003",
+      "useCases": [ "PAN/CVV scrubbing on prompt egress", "Capsule-writer redaction", "Tool-call argument scrubbing" ]
     }
   }
 }
