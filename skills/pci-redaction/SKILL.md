@@ -1,15 +1,15 @@
 ---
 name: PCI Redaction
 id: skill/pci-redaction
-currentVersion: 1.0.0
+currentVersion: 1.1.0
 scope: enterprise
 adoptionPolicy: manual
 optedIn: true
-tokensSavedPerUse: 600
+tokensSavedPerUse: 1100
 useCases: [ "PAN/CVV scrubbing on prompt egress", "Capsule-writer redaction", "Tool-call argument scrubbing" ]
 ---
 
-# PCI Redaction  `skill/pci-redaction@1.0.0`
+# PCI Redaction  `skill/pci-redaction@1.1.0`
 
 Luhn-validated PAN/CVV scrubbing applied to prompts, tool arguments, and capsules before they leave the trust boundary.
 
@@ -21,19 +21,19 @@ Luhn-validated PAN/CVV scrubbing applied to prompts, tool arguments, and capsule
 
 ## Capsule provenance (current version)
 
-The current version `1.0.0` was promoted by the RL gate from capsule **CAP-1003**
+The current version `1.1.0` was promoted by the RL gate from capsule **CAP-1003**
 (session `sess-2b77`, model `claude-opus-4-8`).
 
 > **Finding:** Redact PAN/CVV independently at every trust boundary — capsule writer, prompt egress, and tool-call args — using a Luhn check to avoid false positives on long IDs.
 
 ## Token savings
 
-Each reuse of this skill saves **600 tokens** versus re-deriving the pattern
+Each reuse of this skill saves **1100 tokens** versus re-deriving the pattern
 from a cold session (measured in the A/B harness).
 
 ## Pull this skill
 
 ```bash
-capsule pull pci-redaction@1.0.0        # pin this exact version
+capsule pull pci-redaction@1.1.0        # pin this exact version
 capsule pull pci-redaction             # latest published
 ```
