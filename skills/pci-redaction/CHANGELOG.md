@@ -15,3 +15,9 @@ enterprise registry. Newest first. Versions follow semver (major/minor/patch).
 - **Change:** Add Luhn validation to cut false positives on long IDs.
 - **Tokens saved/use:** 1100 · **Score delta:** +10 · **Adopted by:** 4 agent(s)
 
+## 1.2.0 — patch — 2026-05-20T16:20:00Z  [published]
+- **Learned from:** CAP-1003 (session `sess-2b77`, model `claude-opus-4-8`)
+- **Finding:** Redact PAN/CVV independently at every trust boundary — capsule writer, prompt egress, and tool-call args — using a Luhn check to avoid false positives on long IDs.
+- **Change:** Extend scrubber to the capsule writer and model tool-call arguments.
+- **Tokens saved/use:** 1500 · **Score delta:** +6 · **Adopted by:** 5 agent(s)
+

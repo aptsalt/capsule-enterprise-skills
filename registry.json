@@ -28,11 +28,11 @@
     },
     "skill/pci-redaction": {
       "name": "PCI Redaction",
-      "currentVersion": "1.1.0",
+      "currentVersion": "1.2.0",
       "scope": "enterprise",
       "adoptionPolicy": "manual",
       "optedIn": true,
-      "tokensSavedPerUse": 1100,
+      "tokensSavedPerUse": 1500,
       "derivedFromCapsule": "CAP-1003",
       "useCases": [ "PAN/CVV scrubbing on prompt egress", "Capsule-writer redaction", "Tool-call argument scrubbing" ]
     }
