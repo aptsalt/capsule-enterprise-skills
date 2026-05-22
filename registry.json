@@ -35,6 +35,16 @@
       "tokensSavedPerUse": 1500,
       "derivedFromCapsule": "CAP-1003",
       "useCases": [ "PAN/CVV scrubbing on prompt egress", "Capsule-writer redaction", "Tool-call argument scrubbing" ]
+    },
+    "skill/reconciliation-ledger": {
+      "name": "Reconciliation Ledger",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 700,
+      "derivedFromCapsule": "CAP-1004",
+      "useCases": [ "camt.053 reconciliation", "Partial-settlement matching", "Composite-key ledger sync" ]
     }
   }
 }
