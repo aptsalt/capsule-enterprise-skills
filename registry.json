@@ -38,11 +38,11 @@
     },
     "skill/reconciliation-ledger": {
       "name": "Reconciliation Ledger",
-      "currentVersion": "1.0.0",
+      "currentVersion": "1.1.0",
       "scope": "enterprise",
       "adoptionPolicy": "auto",
       "optedIn": true,
-      "tokensSavedPerUse": 700,
+      "tokensSavedPerUse": 1100,
       "derivedFromCapsule": "CAP-1004",
       "useCases": [ "camt.053 reconciliation", "Partial-settlement matching", "Composite-key ledger sync" ]
     }

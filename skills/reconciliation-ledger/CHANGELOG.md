@@ -9,3 +9,9 @@ enterprise registry. Newest first. Versions follow semver (major/minor/patch).
 - **Change:** Single-key EndToEndId reconciliation.
 - **Tokens saved/use:** 700 · **Score delta:** +7 · **Adopted by:** 2 agent(s)
 
+## 1.1.0 — minor — 2026-05-24T13:40:00Z  [published]
+- **Learned from:** CAP-1004 (session `sess-7d31`, model `claude-sonnet-4-6`)
+- **Finding:** Reconcile camt.053 on a composite (EndToEndId, amount) key with a value-date fallback, because the network re-issues references on partial settlement.
+- **Change:** Composite (EndToEndId, amount) key with value-date fallback for re-issued refs.
+- **Tokens saved/use:** 1100 · **Score delta:** +12 · **Adopted by:** 3 agent(s)
+
