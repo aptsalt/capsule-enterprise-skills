@@ -45,6 +45,16 @@
       "tokensSavedPerUse": 1100,
       "derivedFromCapsule": "CAP-1004",
       "useCases": [ "camt.053 reconciliation", "Partial-settlement matching", "Composite-key ledger sync" ]
+    },
+    "skill/sca-challenge": {
+      "name": "SCA Challenge",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "manual",
+      "optedIn": true,
+      "tokensSavedPerUse": 3200,
+      "derivedFromCapsule": "CAP-1005",
+      "useCases": [ "Risk-driven step-up", "Single-use challenge tokens", "Audited SCA exemptions" ]
     }
   }
 }
