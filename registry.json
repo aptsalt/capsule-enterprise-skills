@@ -1,60 +1,137 @@
 {
-  "registry": "meridian-enterprise-skills",
-  "enterprise": "Meridian Bank",
-  "project": "Payments Copilot",
+  "registry": "capsule-enterprise-skills",
+  "enterprise": "CAPSULE",
+  "project": "Content Engine",
   "memoryStore": "Backboard",
   "scope": "enterprise",
+  "distilledFrom": "real Claude Code coding sessions via local Ollama (qwen2.5-coder:14b); durable memory in Backboard",
   "generatedBy": "Skill Foundry — capsule RL loop",
   "skills": {
-    "skill/payment-idempotency": {
-      "name": "Payment Idempotency",
-      "currentVersion": "2.1.0",
+    "skill/creative-franchise-expansion": {
+      "name": "Creative Franchise Expansion",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 72,
+      "derivedFromCapsule": "CAP-R001",
+      "learnedFromFinding": "When expanding a creative franchise, it's crucial to maintain consistent continuity across all parts to avoid contradictions and ensure a cohesive narrative.",
+      "usedByAgents": [
+        "agent/factory-implementer"
+      ],
+      "useCases": [
+        "Outlining multi-season story arcs",
+        "Locking continuity before subagent fan-out",
+        "Expandable franchise project scaffolding"
+      ]
+    },
+    "skill/automation-maintenance": {
+      "name": "Automation Maintenance",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 1296,
+      "derivedFromCapsule": "CAP-R002",
+      "learnedFromFinding": "Automated hooks can become stale and require manual intervention to resolve, highlighting the need for engineers to regularly review and update automation scripts to prevent such issues.",
+      "usedByAgents": [
+        "agent/factory-implementer"
+      ],
+      "useCases": [
+        "Killing stale Stop-hooks",
+        "Reviewing scheduled automation conditions",
+        "Preventing runaway scheduled jobs"
+      ]
+    },
+    "skill/api-rate-limiting": {
+      "name": "API Rate Limiting",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 157,
+      "derivedFromCapsule": "CAP-R003",
+      "learnedFromFinding": "When integrating third-party APIs, be prepared for unexpected rate limits that may not be directly related to your usage.",
+      "usedByAgents": [
+        "agent/factory-implementer"
+      ],
+      "useCases": [
+        "Handling third-party 429s",
+        "Backoff on server-side throttling",
+        "Resilient MCP/API integration"
+      ]
+    },
+    "skill/angular-upgrade": {
+      "name": "Angular Upgrade",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 1968,
+      "derivedFromCapsule": "CAP-R004",
+      "learnedFromFinding": "When upgrading Angular versions, ensure that local bridges and WebSocket servers are correctly configured to avoid connection issues.",
+      "usedByAgents": [
+        "agent/factory-implementer"
+      ],
+      "useCases": [
+        "Angular 15->22 version upgrades",
+        "Local bridge / WebSocket configuration",
+        "Escaping template interpolation in demos"
+      ]
+    },
+    "skill/command-verification": {
+      "name": "Command Verification",
+      "currentVersion": "2.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 1920,
+      "derivedFromCapsule": "CAP-R005",
+      "learnedFromFinding": "When working with local commands, always verify the actual current state by checking official documentation or authoritative sources instead of relying on inferred information.",
+      "usedByAgents": [
+        "agent/quality-reviewer"
+      ],
+      "useCases": [
+        "Verifying local command state",
+        "Checking official docs before acting",
+        "Inspecting system state vs inference"
+      ]
+    },
+    "skill/api-security": {
+      "name": "API Security",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 1896,
+      "derivedFromCapsule": "CAP-R006",
+      "learnedFromFinding": "Always ensure valid authentication credentials are used when interacting with APIs to avoid repeated errors.",
+      "usedByAgents": [
+        "agent/quality-reviewer"
+      ],
+      "useCases": [
+        "Valid auth-credential handling",
+        "Avoiding repeated 401 errors",
+        "API authentication hygiene"
+      ]
+    },
+    "skill/memory-management": {
+      "name": "Memory Management",
+      "currentVersion": "1.0.0",
       "scope": "enterprise",
       "adoptionPolicy": "auto",
       "optedIn": true,
       "tokensSavedPerUse": 1800,
-      "derivedFromCapsule": "CAP-1001",
-      "useCases": [ "Safe retry of real-time payments", "Refund-endpoint idempotency", "Double-submit protection at the API boundary" ]
-    },
-    "skill/iso20022-mapper": {
-      "name": "ISO 20022 Mapper",
-      "currentVersion": "1.3.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 2400,
-      "derivedFromCapsule": "CAP-1002",
-      "useCases": [ "pacs.008 outbound mapping", "camt inbound parsing", "Currency-correct decimal scaling" ]
-    },
-    "skill/pci-redaction": {
-      "name": "PCI Redaction",
-      "currentVersion": "1.2.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "manual",
-      "optedIn": true,
-      "tokensSavedPerUse": 1500,
-      "derivedFromCapsule": "CAP-1003",
-      "useCases": [ "PAN/CVV scrubbing on prompt egress", "Capsule-writer redaction", "Tool-call argument scrubbing" ]
-    },
-    "skill/reconciliation-ledger": {
-      "name": "Reconciliation Ledger",
-      "currentVersion": "1.1.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 1100,
-      "derivedFromCapsule": "CAP-1004",
-      "useCases": [ "camt.053 reconciliation", "Partial-settlement matching", "Composite-key ledger sync" ]
-    },
-    "skill/sca-challenge": {
-      "name": "SCA Challenge",
-      "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "manual",
-      "optedIn": true,
-      "tokensSavedPerUse": 3200,
-      "derivedFromCapsule": "CAP-1005",
-      "useCases": [ "Risk-driven step-up", "Single-use challenge tokens", "Audited SCA exemptions" ]
+      "derivedFromCapsule": "CAP-R008",
+      "learnedFromFinding": "When dealing with resource-constrained environments, ensure that critical processes like model loading have sufficient memory allocated to prevent silent failures due to out-of-memory errors.",
+      "usedByAgents": [
+        "agent/quality-reviewer"
+      ],
+      "useCases": [
+        "Memory allocation for large model loads",
+        "Pagefile sizing for Flux/LoRA training",
+        "Preventing silent OOM failures"
+      ]
     }
   }
 }

@@ -1,7 +1,10 @@
-# Meridian Bank — Enterprise Skills Registry (capsule-maxxed)
+# CAPSULE — Enterprise Skills Registry (capsule-maxxed)
 
 This repository is the **enterprise, capsule-maxxed skills registry** for the
-*Payments Copilot* program on the 8090 Software Factory.
+*Content Engine* program on the 8090 Software Factory · CAPSULE module.
+
+**Skills here are distilled from real coding sessions via local Ollama
+(`qwen2.5-coder:14b`); the durable distilled memory lives in Backboard.**
 
 `master` always holds the **latest published version of every enterprise skill** —
 the "capsule-maxxed" head of the RL loop. Each skill folder is a self-describing,
@@ -10,47 +13,53 @@ versioned unit with an audit trail back to the capsule that produced it.
 ## The RL loop (how a skill version is born)
 
 ```
-coding session  ──▶  Capsule Refinery  ──▶  capsule (compressed learning, stored in Backboard)
+real Claude Code session  ──▶  Capsule Refinery (local Ollama qwen2.5-coder:14b)
                                                │
                                                ▼
-                                         RL gate (novelty · importance · transfer)
+                          capsule (compressed finding, stored in Backboard)
+                                               │
+                                               ▼
+                            RL gate (novelty · importance · transfer)
                                                │  accepted
                                                ▼
-                                       Skill Foundry forges a new SEMVER version
+                          Skill Foundry forges a new SEMVER version
                                                │
                                                ▼
-                                  committed to THIS repo's `master`  (one commit per version bump)
+                     committed to THIS repo's `master`  (one commit per version bump)
                                                │
                                                ▼
-                       personal/local repos (branch `dee`) pull & PIN specific versions
+            personal/local repos (branch `dee`) pull & PIN specific versions
                                                │
                                                ▼
-                              "updates available" when master moves ahead of a pin
+                 "updates available" when master moves ahead of a pin
 ```
 
-Every coding session is compressed into a **capsule**. The RL gate scores it
-(novelty / importance / transfer). If accepted, the **Skill Foundry** promotes the
-capsule's `finding` into a new **semver** version of the target skill and commits it
-here. The commit message names the capsule and finding — that is the RL audit trail.
+Every real coding session is compressed into a **capsule** by the local model. The RL
+gate scores it (novelty / importance / transfer). If accepted, the **Skill Foundry**
+promotes the capsule's `finding` into a new **semver** version of the target skill and
+commits it here. The commit message names the capsule and finding — that is the RL
+audit trail. Only the distilled briefings are persisted to Backboard.
 
 ## Layout
 
 ```
 skills/<skill-id>/
   SKILL.md       frontmatter + description + capsule provenance + token savings
-  CHANGELOG.md   full semver history, each entry citing the capsule it learned from
+  CHANGELOG.md   full semver history, each entry citing the real capsule it learned from
 registry.json    machine index: skill id -> current version, use-cases, tokensSavedPerUse
 ```
 
 ## Skills (latest on master)
 
-| Skill | Version | Policy | Saved/use | From |
-|-------|---------|--------|-----------|------|
-| `skill/payment-idempotency`   | 2.1.0 | auto   | 1800 | CAP-1001 |
-| `skill/iso20022-mapper`       | 1.3.0 | auto   | 2400 | CAP-1002 |
-| `skill/pci-redaction`         | 1.2.0 | manual | 1500 | CAP-1003 |
-| `skill/reconciliation-ledger` | 1.1.0 | auto   | 1100 | CAP-1004 |
-| `skill/sca-challenge`         | 1.0.0 | manual | 3200 | CAP-1005 |
+| Skill | Version | Policy | Saved/use | From capsule |
+|-------|---------|--------|-----------|--------------|
+| `skill/creative-franchise-expansion` | 1.0.0 | auto | 72 | CAP-R001 |
+| `skill/automation-maintenance` | 1.0.0 | auto | 1296 | CAP-R002 |
+| `skill/api-rate-limiting` | 1.0.0 | auto | 157 | CAP-R003 |
+| `skill/angular-upgrade` | 1.0.0 | auto | 1968 | CAP-R004 |
+| `skill/command-verification` | 2.0.0 | auto | 1920 | CAP-R005 |
+| `skill/api-security` | 1.0.0 | auto | 1896 | CAP-R006 |
+| `skill/memory-management` | 1.0.0 | auto | 1800 | CAP-R008 |
 
 ## Pull a skill
 
