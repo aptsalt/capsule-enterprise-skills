@@ -60,6 +60,11 @@ registry.json    machine index: skill id -> current version, use-cases, tokensSa
 | `skill/command-verification` | 2.0.0 | auto | 1920 | CAP-R005 |
 | `skill/api-security` | 1.0.0 | auto | 1896 | CAP-R006 |
 | `skill/memory-management` | 1.0.0 | auto | 1800 | CAP-R008 |
+| `skill/db-migration-safety` | 1.0.0 | auto | 1740 | CAP-V002 |
+| `skill/docker-build-caching` | 1.0.0 | auto | 612 | CAP-V003 |
+| `skill/ci-flake-quarantine` | 1.0.0 | auto | 980 | CAP-V004 |
+| `skill/secret-rotation` | 1.0.0 | auto | 1404 | CAP-V005 |
+| `skill/websocket-reconnection` | 1.0.0 | auto | 828 | CAP-V006 |
 
 ## Pull a skill
 

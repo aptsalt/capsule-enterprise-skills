@@ -148,6 +148,96 @@
         "Pagefile sizing for Flux/LoRA training",
         "Preventing silent OOM failures"
       ]
+    },
+    "skill/db-migration-safety": {
+      "name": "DB Migration Safety",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 1740,
+      "derivedFromCapsule": "CAP-V002",
+      "learnedFromFinding": "Run schema migrations as expand→backfill→contract: never drop or rename a column in the same deploy that stops writing it, or in-flight code will read a column that no longer exists.",
+      "usedByAgents": [
+        "agent/factory-implementer"
+      ],
+      "useCases": [
+        "Zero-downtime schema migrations",
+        "Expand/backfill/contract rollout",
+        "Avoiding read-after-drop errors"
+      ]
+    },
+    "skill/docker-build-caching": {
+      "name": "Docker Build Caching",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 612,
+      "derivedFromCapsule": "CAP-V003",
+      "learnedFromFinding": "Order Dockerfile layers from least to most volatile and copy dependency manifests before source, so a code change doesn't bust the dependency-install cache layer.",
+      "usedByAgents": [
+        "agent/factory-implementer"
+      ],
+      "useCases": [
+        "Fast incremental Docker builds",
+        "Layer ordering for cache hits",
+        "Separating deps from source copy"
+      ]
+    },
+    "skill/ci-flake-quarantine": {
+      "name": "CI Flake Quarantine",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 980,
+      "derivedFromCapsule": "CAP-V004",
+      "learnedFromFinding": "When a test fails non-deterministically, quarantine it after N flaky runs instead of blanket-retrying the suite — blanket retries mask real regressions and inflate CI time.",
+      "usedByAgents": [
+        "agent/quality-reviewer"
+      ],
+      "useCases": [
+        "Detecting and isolating flaky tests",
+        "Avoiding blanket CI retries",
+        "Keeping signal in the test suite"
+      ]
+    },
+    "skill/secret-rotation": {
+      "name": "Secret Rotation",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 1404,
+      "derivedFromCapsule": "CAP-V005",
+      "learnedFromFinding": "Rotate secrets with overlapping dual-validity windows — provision and activate the new secret before revoking the old one — so in-flight requests don't fail with 401 mid-rotation.",
+      "usedByAgents": [
+        "agent/quality-reviewer"
+      ],
+      "useCases": [
+        "Zero-downtime secret/key rotation",
+        "Dual-validity overlap windows",
+        "Avoiding 401s during rotation"
+      ]
+    },
+    "skill/websocket-reconnection": {
+      "name": "WebSocket Reconnection",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "tokensSavedPerUse": 828,
+      "derivedFromCapsule": "CAP-V006",
+      "learnedFromFinding": "On a dropped WebSocket, reconnect with jittered exponential backoff and a resumable session token — never tight-loop reconnect, which stampedes the server on mass disconnects.",
+      "usedByAgents": [
+        "agent/factory-implementer"
+      ],
+      "useCases": [
+        "Resilient WebSocket reconnection",
+        "Jittered exponential backoff",
+        "Resumable session tokens after drop"
+      ]
     }
   }
 }
