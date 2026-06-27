@@ -1,0 +1,17 @@
+# my-project — personal/local repo: dee (backend / API)
+# Pinned enterprise skills (capsule pull <id>@<version>). Memory in Backboard.
+
+[skills]
+rest-api-design          = 1.0.1   # upgraded locally from a real session (CAP-DEE-01) — ahead of enterprise 1.0.0
+oauth2-jwt-auth          = 1.0.1   # upgraded locally from a real session (CAP-DEE-01) — ahead of enterprise 1.0.0
+idempotency-keys         = 1.0.0
+cursor-pagination        = 1.0.0
+redis-caching            = 1.0.0
+
+[promote]
+# proposed back to enterprise via PR (dee -> master), gated by agentic CI:
+rest-api-design@1.0.1, oauth2-jwt-auth@1.0.1
+
+[source]
+registry = capsule://capsule-enterprise-skills
+remote   = master
