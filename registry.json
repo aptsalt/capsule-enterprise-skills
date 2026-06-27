@@ -5,7 +5,7 @@
   "memoryStore": "Backboard",
   "scope": "enterprise",
   "distilledFrom": "real Claude Code coding sessions via local Ollama (qwen2.5-coder:14b); durable memory in Backboard",
-  "generatedBy": "Skill Foundry — capsule RL loop",
+  "generatedBy": "Skill Foundry \u00e2\u20ac\u201d capsule RL loop",
   "skills": {
     "skill/creative-franchise-expansion": {
       "name": "Creative Franchise Expansion",
@@ -109,8 +109,18 @@
         "Inspecting system state vs inference"
       ],
       "contributors": [
-        { "dev": "dee", "capsule": "CAP-R007", "role": "co-originator + pinned 1.0.0 consumer" },
-        { "dev": "ven", "capsule": "CAP-V001", "role": "independent re-discovery, deduped 2026-06-27", "relation": "dedup", "ledger": "ML-001" }
+        {
+          "dev": "dee",
+          "capsule": "CAP-R007",
+          "role": "co-originator + pinned 1.0.0 consumer"
+        },
+        {
+          "dev": "ven",
+          "capsule": "CAP-V001",
+          "role": "independent re-discovery, deduped 2026-06-27",
+          "relation": "dedup",
+          "ledger": "ML-001"
+        }
       ]
     },
     "skill/api-security": {
@@ -157,7 +167,7 @@
       "optedIn": true,
       "tokensSavedPerUse": 1740,
       "derivedFromCapsule": "CAP-V002",
-      "learnedFromFinding": "Run schema migrations as expand→backfill→contract: never drop or rename a column in the same deploy that stops writing it, or in-flight code will read a column that no longer exists.",
+      "learnedFromFinding": "Run schema migrations as expand\u00e2\u2020\u2019backfill\u00e2\u2020\u2019contract: never drop or rename a column in the same deploy that stops writing it, or in-flight code will read a column that no longer exists.",
       "usedByAgents": [
         "agent/factory-implementer"
       ],
@@ -193,7 +203,7 @@
       "optedIn": true,
       "tokensSavedPerUse": 980,
       "derivedFromCapsule": "CAP-V004",
-      "learnedFromFinding": "When a test fails non-deterministically, quarantine it after N flaky runs instead of blanket-retrying the suite — blanket retries mask real regressions and inflate CI time.",
+      "learnedFromFinding": "When a test fails non-deterministically, quarantine it after N flaky runs instead of blanket-retrying the suite \u00e2\u20ac\u201d blanket retries mask real regressions and inflate CI time.",
       "usedByAgents": [
         "agent/quality-reviewer"
       ],
@@ -211,7 +221,7 @@
       "optedIn": true,
       "tokensSavedPerUse": 1404,
       "derivedFromCapsule": "CAP-V005",
-      "learnedFromFinding": "Rotate secrets with overlapping dual-validity windows — provision and activate the new secret before revoking the old one — so in-flight requests don't fail with 401 mid-rotation.",
+      "learnedFromFinding": "Rotate secrets with overlapping dual-validity windows \u00e2\u20ac\u201d provision and activate the new secret before revoking the old one \u00e2\u20ac\u201d so in-flight requests don't fail with 401 mid-rotation.",
       "usedByAgents": [
         "agent/quality-reviewer"
       ],
@@ -229,7 +239,7 @@
       "optedIn": true,
       "tokensSavedPerUse": 828,
       "derivedFromCapsule": "CAP-V006",
-      "learnedFromFinding": "On a dropped WebSocket, reconnect with jittered exponential backoff and a resumable session token — never tight-loop reconnect, which stampedes the server on mass disconnects.",
+      "learnedFromFinding": "On a dropped WebSocket, reconnect with jittered exponential backoff and a resumable session token \u00e2\u20ac\u201d never tight-loop reconnect, which stampedes the server on mass disconnects.",
       "usedByAgents": [
         "agent/factory-implementer"
       ],
@@ -237,6 +247,276 @@
         "Resilient WebSocket reconnection",
         "Jittered exponential backoff",
         "Resumable session tokens after drop"
+      ]
+    },
+    "skill/rest-api-design": {
+      "name": "REST API Design",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "backend",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Design predictable, resource-oriented HTTP APIs with correct verbs, status codes, versioning, and consistent error envelopes.",
+      "tokensSavedPerUse": 1744,
+      "seededFromCapsule": "CAP-P001",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Modeling resources and routes",
+        "Choosing correct HTTP verbs/status codes",
+        "Versioning and error-envelope conventions"
+      ]
+    },
+    "skill/oauth2-jwt-auth": {
+      "name": "OAuth2 / JWT Auth",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "backend",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Implement standards-compliant OAuth2 flows and JWT validation: short-lived access tokens, rotated refresh tokens, and verified signatures.",
+      "tokensSavedPerUse": 1653,
+      "seededFromCapsule": "CAP-P002",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Authorization Code + PKCE flows",
+        "Validating JWT signature/claims",
+        "Access/refresh token rotation"
+      ]
+    },
+    "skill/idempotency-keys": {
+      "name": "Idempotency Keys",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "backend",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Make unsafe POST/payment operations safe to retry by deduplicating on a client-supplied idempotency key.",
+      "tokensSavedPerUse": 1660,
+      "seededFromCapsule": "CAP-P003",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Safe retries for POST/payments",
+        "Client-supplied Idempotency-Key handling",
+        "Storing and replaying first responses"
+      ]
+    },
+    "skill/cursor-pagination": {
+      "name": "Cursor Pagination",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "backend",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Paginate large, mutating datasets with stable opaque cursors instead of OFFSET, avoiding drift and deep-page slowdown.",
+      "tokensSavedPerUse": 1661,
+      "seededFromCapsule": "CAP-P004",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Stable pagination over mutating data",
+        "Opaque cursor encoding",
+        "Avoiding OFFSET deep-page cost"
+      ]
+    },
+    "skill/redis-caching": {
+      "name": "Redis Caching",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "backend",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Add a Redis cache layer correctly: cache-aside reads, sane TTLs, explicit invalidation, and stampede protection.",
+      "tokensSavedPerUse": 857,
+      "seededFromCapsule": "CAP-P005",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Cache-aside read/write patterns",
+        "TTL and key-namespacing strategy",
+        "Stampede and stale-data protection"
+      ]
+    },
+    "skill/docker-containerization": {
+      "name": "Docker Containerization",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "infra/devops",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Build small, secure, reproducible container images with multi-stage builds, pinned bases, and non-root runtime.",
+      "tokensSavedPerUse": 1244,
+      "seededFromCapsule": "CAP-P006",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Multi-stage build optimization",
+        "Minimal non-root runtime images",
+        "Layer caching and .dockerignore hygiene"
+      ]
+    },
+    "skill/kubernetes-orchestration": {
+      "name": "Kubernetes Orchestration",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "infra/devops",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Run workloads on Kubernetes with correct resource requests/limits, probes, and rollout strategy for self-healing deploys.",
+      "tokensSavedPerUse": 1741,
+      "seededFromCapsule": "CAP-P007",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Deployment manifests and rollouts",
+        "Resource requests/limits + probes",
+        "Config/secret and scaling strategy"
+      ]
+    },
+    "skill/ci-cd-pipelines": {
+      "name": "CI/CD Pipelines",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "infra/devops",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Automate build, test, and deploy with fast, reproducible pipelines, quality gates, and safe progressive rollout.",
+      "tokensSavedPerUse": 1281,
+      "seededFromCapsule": "CAP-P008",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Pipeline stage design",
+        "Quality gates and caching",
+        "Progressive/rollback-safe deploys"
+      ]
+    },
+    "skill/structured-logging": {
+      "name": "Structured Logging",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "infra/devops",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Emit machine-parseable JSON logs with consistent fields, levels, and a correlation id \u2014 never bare strings.",
+      "tokensSavedPerUse": 825,
+      "seededFromCapsule": "CAP-P009",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "JSON log schema and levels",
+        "Correlation/trace id propagation",
+        "Redacting secrets/PII in logs"
+      ]
+    },
+    "skill/observability-tracing": {
+      "name": "Observability & Tracing",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "infra/devops",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Instrument services with OpenTelemetry traces, metrics, and context propagation to debug distributed latency.",
+      "tokensSavedPerUse": 1406,
+      "seededFromCapsule": "CAP-P010",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Distributed trace instrumentation",
+        "RED/USE metrics and SLOs",
+        "Context propagation across services"
+      ]
+    },
+    "skill/database-indexing": {
+      "name": "Database Indexing",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "data/quality",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Design indexes that match query predicates and sort order, covering hot paths while controlling write cost.",
+      "tokensSavedPerUse": 2044,
+      "seededFromCapsule": "CAP-P011",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Composite index column ordering",
+        "Covering indexes and selectivity",
+        "Reading EXPLAIN plans"
+      ]
+    },
+    "skill/input-validation": {
+      "name": "Input Validation",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "data/quality",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Validate and normalize all external input at the boundary with allowlist schemas, rejecting before it reaches logic.",
+      "tokensSavedPerUse": 859,
+      "seededFromCapsule": "CAP-P012",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Schema validation at the boundary",
+        "Allowlist over denylist rules",
+        "Parse-don't-validate normalization"
+      ]
+    },
+    "skill/retry-with-backoff": {
+      "name": "Retry with Backoff",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "data/quality",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Retry transient failures with exponential backoff, jitter, caps, and circuit breaking \u2014 only for idempotent calls.",
+      "tokensSavedPerUse": 1196,
+      "seededFromCapsule": "CAP-P013",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Exponential backoff + jitter",
+        "Retrying only idempotent ops",
+        "Circuit breakers and retry budgets"
+      ]
+    },
+    "skill/async-concurrency": {
+      "name": "Async Concurrency",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "data/quality",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Run I/O concurrently with bounded parallelism, cancellation, and backpressure \u2014 without blocking the event loop.",
+      "tokensSavedPerUse": 2163,
+      "seededFromCapsule": "CAP-P014",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Bounded concurrency / worker pools",
+        "Cancellation and timeouts",
+        "Avoiding event-loop blocking & races"
+      ]
+    },
+    "skill/test-automation": {
+      "name": "Test Automation",
+      "currentVersion": "1.0.0",
+      "scope": "enterprise",
+      "category": "data/quality",
+      "popularity": "top-15",
+      "adoptionPolicy": "auto",
+      "optedIn": true,
+      "description": "Build a fast, reliable automated test suite shaped as a pyramid: many unit, fewer integration, few deterministic E2E.",
+      "tokensSavedPerUse": 1754,
+      "seededFromCapsule": "CAP-P015",
+      "seededFrom": "community best practice",
+      "useCases": [
+        "Test pyramid and coverage strategy",
+        "Deterministic, isolated tests",
+        "CI gating and flake elimination"
       ]
     }
   }
