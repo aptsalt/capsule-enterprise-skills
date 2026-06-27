@@ -1,0 +1,16 @@
+# my-project — personal/local repo: saim (data / quality)
+# Pinned enterprise skills (capsule pull <id>@<version>). Memory in Backboard.
+
+[skills]
+database-indexing        = 1.0.0
+input-validation         = 1.0.0
+retry-with-backoff       = 1.0.0
+async-concurrency        = 1.0.0
+test-automation          = 1.0.0
+
+[contributed]
+CAP-S001 = do/undo conflict -> skill/api-rate-limiting (proposed 2.0.0, escalated to human review)
+
+[source]
+registry = capsule://capsule-enterprise-skills
+remote   = master
