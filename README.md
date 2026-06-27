@@ -1,4 +1,4 @@
-# CAPSULE — Enterprise Skills Registry (capsule-maxxed)
+# CAPSULE — Enterprise Skills Registry
 
 This repository is the **enterprise, capsule-maxxed skills registry** for the
 *Content Engine* program on the 8090 Software Factory · CAPSULE module.
@@ -65,6 +65,45 @@ registry.json    machine index: skill id -> current version, use-cases, tokensSa
 | `skill/ci-flake-quarantine` | 1.0.0 | auto | 980 | CAP-V004 |
 | `skill/secret-rotation` | 1.0.0 | auto | 1404 | CAP-V005 |
 | `skill/websocket-reconnection` | 1.0.0 | auto | 828 | CAP-V006 |
+
+## Top-15 popular engineering catalog (seeded from community best practice)
+
+In addition to the capsule-distilled skills above, `master` carries a catalog of the
+**15 most popular real-world engineering skills**, seeded at `1.0.0` from community
+best practice and admitted under capsules `CAP-P001..P015`. They follow the same RL
+loop from here on. Each dev branch pins a unique, role-aligned set of 5.
+
+**Backend / API** (pinned by **`dee`**)
+
+| Skill | Version | Category | Saved/use | Seed capsule |
+|-------|---------|----------|-----------|--------------|
+| `skill/rest-api-design` | 1.0.0 | backend | 1744 | CAP-P001 |
+| `skill/oauth2-jwt-auth` | 1.0.0 | backend | 1653 | CAP-P002 |
+| `skill/idempotency-keys` | 1.0.0 | backend | 1660 | CAP-P003 |
+| `skill/cursor-pagination` | 1.0.0 | backend | 1661 | CAP-P004 |
+| `skill/redis-caching` | 1.0.0 | backend | 857 | CAP-P005 |
+
+**Infra / DevOps** (pinned by **`ven`**)
+
+| Skill | Version | Category | Saved/use | Seed capsule |
+|-------|---------|----------|-----------|--------------|
+| `skill/docker-containerization` | 1.0.0 | infra/devops | 1244 | CAP-P006 |
+| `skill/kubernetes-orchestration` | 1.0.0 | infra/devops | 1741 | CAP-P007 |
+| `skill/ci-cd-pipelines` | 1.0.0 | infra/devops | 1281 | CAP-P008 |
+| `skill/structured-logging` | 1.0.0 | infra/devops | 825 | CAP-P009 |
+| `skill/observability-tracing` | 1.0.0 | infra/devops | 1406 | CAP-P010 |
+
+**Data / Quality** (pinned by **`saim`**)
+
+| Skill | Version | Category | Saved/use | Seed capsule |
+|-------|---------|----------|-----------|--------------|
+| `skill/database-indexing` | 1.0.0 | data/quality | 2044 | CAP-P011 |
+| `skill/input-validation` | 1.0.0 | data/quality | 859 | CAP-P012 |
+| `skill/retry-with-backoff` | 1.0.0 | data/quality | 1196 | CAP-P013 |
+| `skill/async-concurrency` | 1.0.0 | data/quality | 2163 | CAP-P014 |
+| `skill/test-automation` | 1.0.0 | data/quality | 1754 | CAP-P015 |
+
+The registry now indexes **27 skills** (12 capsule-distilled + 15 popular seeds).
 
 ## Pull a skill
 

@@ -1,227 +1,273 @@
 {
   "registry": "capsule-enterprise-skills",
   "enterprise": "CAPSULE",
-  "project": "Content Engine",
-  "memoryStore": "Backboard",
   "scope": "enterprise",
-  "distilledFrom": "real Claude Code coding sessions via local Ollama (qwen2.5-coder:14b); durable memory in Backboard",
-  "generatedBy": "Skill Foundry — capsule RL loop",
+  "memoryStore": "Backboard",
+  "generatedBy": "Skill Foundry — capsule RL loop (derived from skills/*/SKILL.md)",
+  "totalSkills": 27,
+  "counts": {
+    "real": 12,
+    "enterprise": 0,
+    "popular": 15
+  },
+  "branches": {
+    "master": "enterprise registry",
+    "dee": [
+      "rest-api-design",
+      "oauth2-jwt-auth",
+      "idempotency-keys",
+      "cursor-pagination",
+      "redis-caching"
+    ],
+    "ven": [
+      "docker-containerization",
+      "kubernetes-orchestration",
+      "ci-cd-pipelines",
+      "structured-logging",
+      "observability-tracing"
+    ],
+    "saim": [
+      "database-indexing",
+      "input-validation",
+      "retry-with-backoff",
+      "async-concurrency",
+      "test-automation"
+    ]
+  },
   "skills": {
-    "skill/creative-franchise-expansion": {
-      "name": "Creative Franchise Expansion",
+    "skill/angular-upgrade": {
+      "name": "Angular Upgrade",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 72,
-      "derivedFromCapsule": "CAP-R001",
-      "learnedFromFinding": "When expanding a creative franchise, it's crucial to maintain consistent continuity across all parts to avoid contradictions and ensure a cohesive narrative.",
-      "usedByAgents": [
-        "agent/factory-implementer"
-      ],
-      "useCases": [
-        "Outlining multi-season story arcs",
-        "Locking continuity before subagent fan-out",
-        "Expandable franchise project scaffolding"
-      ]
-    },
-    "skill/automation-maintenance": {
-      "name": "Automation Maintenance",
-      "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 1296,
-      "derivedFromCapsule": "CAP-R002",
-      "learnedFromFinding": "Automated hooks can become stale and require manual intervention to resolve, highlighting the need for engineers to regularly review and update automation scripts to prevent such issues.",
-      "usedByAgents": [
-        "agent/factory-implementer"
-      ],
-      "useCases": [
-        "Killing stale Stop-hooks",
-        "Reviewing scheduled automation conditions",
-        "Preventing runaway scheduled jobs"
-      ]
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 1968
     },
     "skill/api-rate-limiting": {
       "name": "API Rate Limiting",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 157,
-      "derivedFromCapsule": "CAP-R003",
-      "learnedFromFinding": "When integrating third-party APIs, be prepared for unexpected rate limits that may not be directly related to your usage.",
-      "usedByAgents": [
-        "agent/factory-implementer"
-      ],
-      "useCases": [
-        "Handling third-party 429s",
-        "Backoff on server-side throttling",
-        "Resilient MCP/API integration"
-      ]
-    },
-    "skill/angular-upgrade": {
-      "name": "Angular Upgrade",
-      "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 1968,
-      "derivedFromCapsule": "CAP-R004",
-      "learnedFromFinding": "When upgrading Angular versions, ensure that local bridges and WebSocket servers are correctly configured to avoid connection issues.",
-      "usedByAgents": [
-        "agent/factory-implementer"
-      ],
-      "useCases": [
-        "Angular 15->22 version upgrades",
-        "Local bridge / WebSocket configuration",
-        "Escaping template interpolation in demos"
-      ]
-    },
-    "skill/command-verification": {
-      "name": "Command Verification",
-      "currentVersion": "2.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 1920,
-      "derivedFromCapsule": "CAP-R005",
-      "learnedFromFinding": "When working with local commands, always verify the actual current state by checking official documentation or authoritative sources instead of relying on inferred information.",
-      "usedByAgents": [
-        "agent/quality-reviewer"
-      ],
-      "useCases": [
-        "Verifying local command state",
-        "Checking official docs before acting",
-        "Inspecting system state vs inference"
-      ]
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 157
     },
     "skill/api-security": {
       "name": "API Security",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 1896,
-      "derivedFromCapsule": "CAP-R006",
-      "learnedFromFinding": "Always ensure valid authentication credentials are used when interacting with APIs to avoid repeated errors.",
-      "usedByAgents": [
-        "agent/quality-reviewer"
-      ],
-      "useCases": [
-        "Valid auth-credential handling",
-        "Avoiding repeated 401 errors",
-        "API authentication hygiene"
-      ]
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 1896
     },
-    "skill/memory-management": {
-      "name": "Memory Management",
+    "skill/async-concurrency": {
+      "name": "Async Concurrency",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 1800,
-      "derivedFromCapsule": "CAP-R008",
-      "learnedFromFinding": "When dealing with resource-constrained environments, ensure that critical processes like model loading have sufficient memory allocated to prevent silent failures due to out-of-memory errors.",
-      "usedByAgents": [
-        "agent/quality-reviewer"
+      "group": "popular",
+      "pinnedBy": [
+        "saim"
       ],
-      "useCases": [
-        "Memory allocation for large model loads",
-        "Pagefile sizing for Flux/LoRA training",
-        "Preventing silent OOM failures"
-      ]
+      "category": "data/quality",
+      "tokensSavedPerUse": 2163
     },
-    "skill/db-migration-safety": {
-      "name": "DB Migration Safety",
+    "skill/automation-maintenance": {
+      "name": "Automation Maintenance",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 1740,
-      "derivedFromCapsule": "CAP-V002",
-      "learnedFromFinding": "Run schema migrations as expand→backfill→contract: never drop or rename a column in the same deploy that stops writing it, or in-flight code will read a column that no longer exists.",
-      "usedByAgents": [
-        "agent/factory-implementer"
-      ],
-      "useCases": [
-        "Zero-downtime schema migrations",
-        "Expand/backfill/contract rollout",
-        "Avoiding read-after-drop errors"
-      ]
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 1296
     },
-    "skill/docker-build-caching": {
-      "name": "Docker Build Caching",
+    "skill/ci-cd-pipelines": {
+      "name": "CI/CD Pipelines",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 612,
-      "derivedFromCapsule": "CAP-V003",
-      "learnedFromFinding": "Order Dockerfile layers from least to most volatile and copy dependency manifests before source, so a code change doesn't bust the dependency-install cache layer.",
-      "usedByAgents": [
-        "agent/factory-implementer"
+      "group": "popular",
+      "pinnedBy": [
+        "ven"
       ],
-      "useCases": [
-        "Fast incremental Docker builds",
-        "Layer ordering for cache hits",
-        "Separating deps from source copy"
-      ]
+      "category": "infra/devops",
+      "tokensSavedPerUse": 1281
     },
     "skill/ci-flake-quarantine": {
       "name": "CI Flake Quarantine",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 980,
-      "derivedFromCapsule": "CAP-V004",
-      "learnedFromFinding": "When a test fails non-deterministically, quarantine it after N flaky runs instead of blanket-retrying the suite — blanket retries mask real regressions and inflate CI time.",
-      "usedByAgents": [
-        "agent/quality-reviewer"
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 980
+    },
+    "skill/command-verification": {
+      "name": "Command Verification",
+      "currentVersion": "2.0.0",
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 1920
+    },
+    "skill/creative-franchise-expansion": {
+      "name": "Creative Franchise Expansion",
+      "currentVersion": "1.0.0",
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 72
+    },
+    "skill/cursor-pagination": {
+      "name": "Cursor Pagination",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "dee"
       ],
-      "useCases": [
-        "Detecting and isolating flaky tests",
-        "Avoiding blanket CI retries",
-        "Keeping signal in the test suite"
-      ]
+      "category": "backend",
+      "tokensSavedPerUse": 1661
+    },
+    "skill/database-indexing": {
+      "name": "Database Indexing",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "saim"
+      ],
+      "category": "data/quality",
+      "tokensSavedPerUse": 2044
+    },
+    "skill/db-migration-safety": {
+      "name": "DB Migration Safety",
+      "currentVersion": "1.0.0",
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 1740
+    },
+    "skill/docker-build-caching": {
+      "name": "Docker Build Caching",
+      "currentVersion": "1.0.0",
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 612
+    },
+    "skill/docker-containerization": {
+      "name": "Docker Containerization",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "ven"
+      ],
+      "category": "infra/devops",
+      "tokensSavedPerUse": 1244
+    },
+    "skill/idempotency-keys": {
+      "name": "Idempotency Keys",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "dee"
+      ],
+      "category": "backend",
+      "tokensSavedPerUse": 1660
+    },
+    "skill/input-validation": {
+      "name": "Input Validation",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "saim"
+      ],
+      "category": "data/quality",
+      "tokensSavedPerUse": 859
+    },
+    "skill/kubernetes-orchestration": {
+      "name": "Kubernetes Orchestration",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "ven"
+      ],
+      "category": "infra/devops",
+      "tokensSavedPerUse": 1741
+    },
+    "skill/memory-management": {
+      "name": "Memory Management",
+      "currentVersion": "1.0.0",
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 1800
+    },
+    "skill/oauth2-jwt-auth": {
+      "name": "OAuth2 / JWT Auth",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "dee"
+      ],
+      "category": "backend",
+      "tokensSavedPerUse": 1653
+    },
+    "skill/observability-tracing": {
+      "name": "Observability & Tracing",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "ven"
+      ],
+      "category": "infra/devops",
+      "tokensSavedPerUse": 1406
+    },
+    "skill/redis-caching": {
+      "name": "Redis Caching",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "dee"
+      ],
+      "category": "backend",
+      "tokensSavedPerUse": 857
+    },
+    "skill/rest-api-design": {
+      "name": "REST API Design",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "dee"
+      ],
+      "category": "backend",
+      "tokensSavedPerUse": 1744
+    },
+    "skill/retry-with-backoff": {
+      "name": "Retry with Backoff",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "saim"
+      ],
+      "category": "data/quality",
+      "tokensSavedPerUse": 1196
     },
     "skill/secret-rotation": {
       "name": "Secret Rotation",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 1404,
-      "derivedFromCapsule": "CAP-V005",
-      "learnedFromFinding": "Rotate secrets with overlapping dual-validity windows — provision and activate the new secret before revoking the old one — so in-flight requests don't fail with 401 mid-rotation.",
-      "usedByAgents": [
-        "agent/quality-reviewer"
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 1404
+    },
+    "skill/structured-logging": {
+      "name": "Structured Logging",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "ven"
       ],
-      "useCases": [
-        "Zero-downtime secret/key rotation",
-        "Dual-validity overlap windows",
-        "Avoiding 401s during rotation"
-      ]
+      "category": "infra/devops",
+      "tokensSavedPerUse": 825
+    },
+    "skill/test-automation": {
+      "name": "Test Automation",
+      "currentVersion": "1.0.0",
+      "group": "popular",
+      "pinnedBy": [
+        "saim"
+      ],
+      "category": "data/quality",
+      "tokensSavedPerUse": 1754
     },
     "skill/websocket-reconnection": {
       "name": "WebSocket Reconnection",
       "currentVersion": "1.0.0",
-      "scope": "enterprise",
-      "adoptionPolicy": "auto",
-      "optedIn": true,
-      "tokensSavedPerUse": 828,
-      "derivedFromCapsule": "CAP-V006",
-      "learnedFromFinding": "On a dropped WebSocket, reconnect with jittered exponential backoff and a resumable session token — never tight-loop reconnect, which stampedes the server on mass disconnects.",
-      "usedByAgents": [
-        "agent/factory-implementer"
-      ],
-      "useCases": [
-        "Resilient WebSocket reconnection",
-        "Jittered exponential backoff",
-        "Resumable session tokens after drop"
-      ]
+      "group": "real",
+      "pinnedBy": [],
+      "tokensSavedPerUse": 828
     }
   }
 }
