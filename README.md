@@ -1,4 +1,4 @@
-# CAPSULE — Enterprise Skills Registry (capsule-maxxed)
+# CAPSULE — Enterprise Skills Registry
 
 This repository is the **enterprise, capsule-maxxed skills registry** for the
 *Content Engine* program on the 8090 Software Factory · CAPSULE module.
