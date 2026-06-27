@@ -78,3 +78,14 @@ skill/command-verification (canonical "inspect actual system state")
 2. **No silent contradiction.** A `do/undo` can never be a minor/patch — it is supersede or reject, and it escalates.
 3. **Reward gates publish.** A proposed version merges to `master` head only if the A/B harness shows improved reward and prior-capsule regressions pass.
 4. **Append-only.** Entries are never edited in place; corrections are new entries.
+
+## PROMOTE — creative-franchise-expansion@2.0.0 — agent/factory-implementer via CAP-R001
+
+- **Date:** 2026-06-27T17:10:05.106Z
+- **Capsule:** `CAP-R001` (author **agent/factory-implementer**, session `2535b3ad`)
+- **Skill:** `skill/creative-franchise-expansion` 1.0.0 → **2.0.0** (major)
+- **Relation:** Initial creation of skill for managing creative franchise expansion.
+- **Gate:** transfer 40; novelty 75 → needs review
+- **Agentic-CI A/B (local qwen2.5-coder:14b, prompt_eval+eval):** tokens 392 → 478 (Δ +86) → **reward flat/worse**
+- **Decision:** staged `proposed` on `promotion/creative-franchise-expansion/PROPOSED-2.0.0.SKILL.md` — **not** force-merged to master head.
+- **Source of record:** live promote via /api/promote (CAPSULE relay)
