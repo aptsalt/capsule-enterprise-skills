@@ -5,6 +5,12 @@
 command-verification = 1.0.0   # PINNED OLD (master is 2.0.0) — ven's own CAP-V001 deduped INTO this canonical 1.0.0 finding (system-state inspection); co-credited with dee
 api-security         = 1.0.0   # current with master
 memory-management    = 1.0.0   # current with master
+# --- infra / devops role pack (top-15 popular seeds, pinned 1.0.0; current with master) ---
+docker-containerization  = 1.0.0   # multi-stage, pinned base, non-root minimal runtime images
+kubernetes-orchestration = 1.0.0   # requests/limits + probes + rolling updates + PDB self-healing
+ci-cd-pipelines          = 1.0.0   # fast-fail stages, build-once-promote, progressive rollback-safe deploys
+structured-logging       = 1.0.0   # JSON events, levels, propagated trace id, redacted secrets
+observability-tracing    = 1.0.0   # OpenTelemetry traces/metrics/logs, RED/USE + SLO alerts
 
 [contributed]
 # capsule submitted by ven and merged up the loop (see contributed-capsules/)
