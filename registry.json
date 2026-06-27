@@ -59,7 +59,19 @@
         "Handling third-party 429s",
         "Backoff on server-side throttling",
         "Resilient MCP/API integration"
-      ]
+      ],
+      "proposedSupersede": {
+        "version": "2.0.0",
+        "bump": "major",
+        "relation": "do/undo",
+        "status": "proposed",
+        "stagedOn": "promotion/api-rate-limiting",
+        "fromCapsule": "CAP-S001",
+        "contributedBy": "saim",
+        "ci": "PASS (pass 6->9/10, tokens 404->263, no regressions)",
+        "escalation": "human-review-required",
+        "ledger": "ML-002"
+      }
     },
     "skill/angular-upgrade": {
       "name": "Angular Upgrade",
@@ -95,6 +107,10 @@
         "Verifying local command state",
         "Checking official docs before acting",
         "Inspecting system state vs inference"
+      ],
+      "contributors": [
+        { "dev": "dee", "capsule": "CAP-R007", "role": "co-originator + pinned 1.0.0 consumer" },
+        { "dev": "ven", "capsule": "CAP-V001", "role": "independent re-discovery, deduped 2026-06-27", "relation": "dedup", "ledger": "ML-001" }
       ]
     },
     "skill/api-security": {
